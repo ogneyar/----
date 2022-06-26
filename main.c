@@ -10,8 +10,9 @@
 int main(int argc, char *argv[]) {	
 
 	if (argc < 2) {
-		printf("Enter name read file\n\nExample: %s", argv[0]);
-		printf(" text.txt");
+		printf("Enter name readable file.\n\nExample: %s", argv[0]);
+		printf(" text.txt\n");
+		printf("\n(Presss any key...)\n");
 		getchar();
 		return 1;
 	}
@@ -21,12 +22,13 @@ int main(int argc, char *argv[]) {
 	char c;	
 	//char name[] = "тест.та";
 	char name[] = "test.txt";
+	// char name[] = argv[1];
 		
 	//file = fopen(name, WRITE_IN_END);
     //fprintf(file, "\nHello, World!");	
     //fclose(file);
 	
-	file = fopen(name, READ_ONLY);
+	file = fopen(argv[1], READ_ONLY);
 	
 	if (file == NULL) {
 		printf("Not open file...");
@@ -45,6 +47,7 @@ int main(int argc, char *argv[]) {
 	
     //printf("%s", buffer);	
 	printf("\nRead file: %s", argv[1]);
+	printf("\n\n(Presss any key...)\n");
 	getchar();
 	return 0;
 }
