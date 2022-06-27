@@ -1,4 +1,5 @@
 
+#include <inttypes.h>
 #include <stdio.h>
 
 #define BUFSIZE 1024
